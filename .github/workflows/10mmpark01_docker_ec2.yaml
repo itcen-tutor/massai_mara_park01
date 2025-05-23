@@ -36,7 +36,8 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64,linux/arm64/v8
+          #platforms: linux/amd64,linux/arm64/v8,linux/arm64/v7,linux/arm64
+          platforms: linux/arm64/v8
           push: true
           load: false
           tags: |
