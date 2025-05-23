@@ -51,7 +51,7 @@ jobs:
         with:
           name: application.jar  
 
-      - name: setup  SSH Directory
+      - name: setup SSH Directory
         run: |
           mkdir -p  ~/.ssh
           chmod 700 ~/.ssh
