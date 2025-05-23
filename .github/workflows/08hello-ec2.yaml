@@ -29,8 +29,7 @@ jobs:
 
           ssh -vvv -o StrictHostKeyChecking=no \
             -o "UserKnownHostsFile=/dev/null" \ 
-            -i ~/.ssh/ec2_key -p 12137 \
-            ${USER_NAME}@${HOSTNAME} '
+            -i ~/.ssh/ec2_key -p 12137 ${USER_NAME}@${HOSTNAME} '
 
               echo "현재사용자: $(whoami)"
               echo "호스트명: $(hostname)"
