@@ -1,5 +1,5 @@
 # 빌드 단계
-FROM gradle:8.12-jdk17 AS build
+FROM gradle:8.12-jdk17-jammy AS build
 
 WORKDIR /app
 
@@ -13,7 +13,7 @@ COPY src ./src
 RUN gradle bootJar --no-daemon -x test
 
 # 실행 단계
-FROM amazoncorretto:17
+FROM amazoncorretto:17-jammy
 
 WORKDIR /app
 
@@ -25,5 +25,4 @@ ENV SERVER_PORT=8080
 EXPOSE 8080
 
 #ENTRYPOINT ["sh", "-c", "java ${JAVA_OPTS} -jar app.jar"]
-#ENTRYPOINT ["java", "$JAVA_OPTS", "-jar", "app.jar"]
-ENTRYPOINT exec java $JAVA_OPTS -jar app.jar
+ENTRYPOINT ["java", "$JAVA_OPTS", "-jar", "app.jar"]
