@@ -34,7 +34,6 @@ jobs:
             ${{env.EC2_USERNAME}}@${{env.EC2_HOSTNAME}} '
 
               echo "현재사용자: $(whoami)"
-              echo "호스트명: $(hostname)"
               echo "현재시간: $(date)"
               echo "메모리사용량"
               free -h
