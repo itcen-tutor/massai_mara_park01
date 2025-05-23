@@ -31,7 +31,7 @@ jobs:
           ssh -vvv -o StrictHostKeyChecking=no \
             -o "UserKnownHostsFile=/dev/null" \ 
             -i ~/.ssh/ec2_key -p 12137 \
-            ${{env.EC2_USERNAME}}@${{env.EC2_HOSTNAME}} '
+            ${{env.EC2_USERNAME}}@${{env.EC2_HOSTNAME}}   '
 
               echo "현재사용자: $(whoami)"
               echo "현재시간: $(date)"
