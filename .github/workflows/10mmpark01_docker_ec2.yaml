@@ -125,6 +125,6 @@ jobs:
             docker compose -f ./compose-multijobs.yaml up -d  
             sleep 30
           
-            docker compose ps
-            docker compose logs
+            docker compose -f ./compose-multijobs.yaml ps
+            docker compose -f ./compose-multijobs.yaml logs
   
